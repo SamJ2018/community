@@ -34,3 +34,12 @@ create table USER
                 </dependencies>
             </plugin>
 ```
+
+
+### bash速查
+```bash
+mvn flyway:migrate
+mvn flyway:repair
+git status
+git commit -m   git push  git add .
+```
