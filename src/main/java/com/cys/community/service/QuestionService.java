@@ -68,7 +68,7 @@ public class QuestionService {
         return paginationDTO;
     }
 
-    public PaginationDTO list(Integer userId, Integer page, Integer size) {
+    public PaginationDTO list(Long userId, Integer page, Integer size) {
         PaginationDTO paginationDTO = new PaginationDTO();
         Integer totalPage;
         //获取到所有记录数
@@ -103,7 +103,7 @@ public class QuestionService {
         return paginationDTO;
     }
 
-    public QuestionDTO getById(Integer id) {
+    public QuestionDTO getById(Long id) {
         Question question = questionMapper.selectByPrimaryKey(id);
         if (question == null) {
             throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
@@ -141,7 +141,7 @@ public class QuestionService {
         }
     }
 
-    public void increaseView(Integer id) {
+    public void increaseView(Long id) {
         Question question = new Question();
         question.setId(id);
         question.setViewCount(1);
