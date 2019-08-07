@@ -1,5 +1,6 @@
-package com.cys.community.exception;
+package com.cys.community.controller;
 
+import com.cys.community.exception.CustomizeErrorCode;
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -45,7 +46,7 @@ public class CustomizeErrorController implements ErrorController {
             model.addAttribute("message","请求资源错误，请换个姿势？");
         }
         if(status.is5xxServerError()){
-            model.addAttribute("message","服务器冒烟了，要不稍后再试试？");
+            model.addAttribute("message", CustomizeErrorCode.SERVICE_ERROR);
         }
         return new ModelAndView("error");
     }

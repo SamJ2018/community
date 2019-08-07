@@ -1,15 +1,26 @@
 package com.cys.community.dto;
 
+/**
+ * @Author: sam
+ * @create 2019-08-07-10:08 PM
+ * @Description:
+ **/
+
+import com.cys.community.model.User;
 import lombok.Data;
 
 /**
- * @Author: sam
- * @create 2019-08-07-4:19 PM
- * @Description:
- **/
+ * 页面接受到的DTO
+ */
 @Data
 public class CommentDTO {
+    private Long id;
     private Long parentId;
-    private String content;
     private Integer type;
+    private Long commentator;
+    private Long gmtCreate;
+    private Long gmtModified;
+    private Long likeCount;
+    private String content;
+    private User user;
 }
