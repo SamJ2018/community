@@ -42,4 +42,5 @@ mvn flyway:migrate
 mvn flyway:repair
 git status
 git commit -m   git push  git add .
+mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 ```
