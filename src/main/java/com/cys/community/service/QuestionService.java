@@ -4,6 +4,7 @@ import com.cys.community.dto.PaginationDTO;
 import com.cys.community.dto.QuestionDTO;
 import com.cys.community.exception.CustomizeErrorCode;
 import com.cys.community.exception.CustomizeException;
+import com.cys.community.mapper.QuestionExtMapper;
 import com.cys.community.mapper.QuestionMapper;
 import com.cys.community.mapper.UserMapper;
 import com.cys.community.model.Question;
@@ -34,6 +35,9 @@ public class QuestionService {
 
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    private QuestionExtMapper questionExtMapper;
 
     public PaginationDTO list(Integer page, Integer size) {
 
@@ -135,6 +139,13 @@ public class QuestionService {
             }
 
         }
+    }
+
+    public void increaseView(Integer id) {
+        Question question = new Question();
+        question.setId(id);
+        question.setViewCount(1);
+        questionExtMapper.incView(question);
     }
 }
 

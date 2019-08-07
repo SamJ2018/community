@@ -1,7 +1,6 @@
 package com.cys.community.controller;
 
 import com.cys.community.dto.QuestionDTO;
-import com.cys.community.mapper.QuestionMapper;
 import com.cys.community.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,6 +23,8 @@ public class QuestionController {
     public String question(@PathVariable(name = "id") Integer id,
                            Model model) {
         QuestionDTO questionDTO = questionService.getById(id);
+        //累加阅读数
+        questionService.increaseView(id);
         model.addAttribute("question", questionDTO);
         return "question";
     }
