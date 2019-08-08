@@ -74,18 +74,19 @@ public class CommentService {
             commentParent.setCommentCount(1);
             commentExtMapper.incCommentCount(commentParent);
             //==================================================更新评论通知-------
-            createNotify(comment, dbComment.getCommentator(), question.getTitle(),commentator.getName(), NotificationEnum.REPLY_COMMENT, question.getId());
+            createNotify(comment, dbComment.getCommentator(), question.getTitle(), commentator.getName(), NotificationEnum.REPLY_COMMENT, question.getId());
         } else {
             //回复问题
             Question question = questionMapper.selectByPrimaryKey(comment.getParentId());
             if (question == null) {
                 throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
             }
+            comment.setCommentCount(0);
             commentMapper.insert(comment);
             question.setCommentCount(1);
             questionExtMapper.incCommentCount(question);  //rollback
             //===================================================更新回复通知------
-            createNotify(comment, question.getCreator(), question.getTitle(),commentator.getName(), NotificationEnum.REPLY_QUESTION, question.getId());
+            createNotify(comment, question.getCreator(), question.getTitle(), commentator.getName(), NotificationEnum.REPLY_QUESTION, question.getId());
 
         }
     }
@@ -93,6 +94,9 @@ public class CommentService {
     private void createNotify(Comment comment, Long receiver, String outerTitle,
                               String notifierName, NotificationEnum notificationType,
                               Long outerId) {
+        if (receiver == comment.getCommentator()) {
+            return;
+        }
         Notification notification = new Notification();
         notification.setGmtCreate(System.currentTimeMillis());
         notification.setType(notificationType.getType());
@@ -112,7 +116,6 @@ public class CommentService {
         commentExample.createCriteria().andParentIdEqualTo(id).andTypeEqualTo(type.getType());
 
         List<Comment> comments = commentMapper.selectByExample(commentExample);
-        System.out.println(comments);
         if (comments.size() == 0) {
             return new ArrayList<>();
         }
