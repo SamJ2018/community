@@ -6,10 +6,16 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/css/community.css">
+    <link rel="stylesheet" href="/css/editormd.preview.min.css">
     <script src="/js/jquery-3.4.1.min.js" type="application/javascript"></script>
     <script src="/js/bootstrap.min.js" type="application/javascript"></script>
     <script src="/js/moment.js" type="application/javascript"></script>
     <script src="/js/community.js" type="application/javascript"></script>
+
+
+    <script src="/js/editormd.min.js" type="application/javascript"></script>
+    <script src="/js/lib/marked.min.js" type="application/javascript"></script>
+    <script src="/js/lib/prettify.min.js" type="application/javascript"></script>
 </head>
 <body>
 <div th:insert="~{navigation :: nav}"></div>
@@ -29,7 +35,16 @@
             <hr class="col-lg-12 col-md-12 col-sm-12">
 
             <!--内容-->
-            <div class="col-lg-12 col-md-12 col-sm-12" th:text="${question.description}"></div>
+            <div class="col-lg-12 col-md-12 col-sm-12" id="question-view">
+                <textarea style="display: none;" th:text="${question.description}"></textarea>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    editormd.markdownToHTML("question-view",{
+
+                    });
+                });
+            </script>
 
             <!--标签-->
             <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -53,7 +68,7 @@
                 <h4>
                     <span th:text="${question.commentCount}"></span>个回复
                 </h4>
-                <hr class="col-lg-12 col-md-12 col-sm-12 comment-sp">q
+                <hr class="col-lg-12 col-md-12 col-sm-12 comment-sp">
                 <div class="col-lg-12 col-md-12 col-sm-12 comments" th:each="comment : ${comments}">
                     <div class="media">
                         <div class="media-left">
@@ -141,8 +156,8 @@
             <!--微信号-->
             <hr class="col-lg-12 col-md-12 col-sm-12">
             <div class="col-lg-12 col-md-12 col-sm-12">
-                <h4>技术交流</h4>u
-                <img src="/image/wx_img.png" width="100%" class="img-thumbnail">
+                <h4>技术交流</h4>
+                <img src="/images/wx_img.png" width="100%" class="img-thumbnail">
             </div>
 
             <!--相关问题-->
