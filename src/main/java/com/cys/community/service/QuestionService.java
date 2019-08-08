@@ -10,13 +10,16 @@ import com.cys.community.mapper.UserMapper;
 import com.cys.community.model.Question;
 import com.cys.community.model.QuestionExample;
 import com.cys.community.model.User;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @Author: sam
@@ -53,7 +56,9 @@ public class QuestionService {
 
         //size 5
         Integer offset = size * (page - 1);
-        List<Question> questions = questionMapper.selectByExampleWithRowbounds(new QuestionExample(), new RowBounds(offset, size));
+        QuestionExample questionExample = new QuestionExample();
+        questionExample.setOrderByClause("gmt_create desc");
+        List<Question> questions = questionMapper.selectByExampleWithRowbounds(questionExample, new RowBounds(offset, size));
         List<QuestionDTO> questionDTOS = new ArrayList<>();
         for (Question question : questions) {
             User user = userMapper.selectByPrimaryKey(question.getCreator());
@@ -62,7 +67,7 @@ public class QuestionService {
             questionDTO.setUser(user);//用于同时获得用户信息
             questionDTOS.add(questionDTO);
         }
-        paginationDTO.setQuestionDTOList(questionDTOS);
+        paginationDTO.setData(questionDTOS);
 
 
         return paginationDTO;
@@ -97,7 +102,7 @@ public class QuestionService {
             questionDTO.setUser(user);//用于同时获得用户信息
             questionDTOS.add(questionDTO);
         }
-        paginationDTO.setQuestionDTOList(questionDTOS);
+        paginationDTO.setData(questionDTOS);
 
 
         return paginationDTO;
@@ -149,6 +154,33 @@ public class QuestionService {
         question.setId(id);
         question.setViewCount(1);
         questionExtMapper.incView(question);
+    }
+
+    public List<QuestionDTO> selectRelated(QuestionDTO queryDTO) {
+        if (StringUtils.isBlank(queryDTO.getTag())) {
+            return new ArrayList<>();
+        }//其实不用判断
+
+        //获取每一个tag
+        String[] tags = StringUtils.split(queryDTO.getTag(), ",");
+        String regexTag = Arrays.stream(tags).collect(Collectors.joining("|"));
+
+        //获取questionid和正则  寻找相关问题
+        Question question = new Question();
+        question.setId(queryDTO.getId());
+        question.setTag(regexTag);
+
+
+        List<Question> questions = questionExtMapper.selectRelated(question);
+
+        //封装获得的每一个question
+        List<QuestionDTO> questionDTOS = questions.stream().map(q -> {
+            QuestionDTO questionDTO = new QuestionDTO();
+            BeanUtils.copyProperties(q, questionDTO);
+            return questionDTO;
+        }).collect(Collectors.toList());
+
+        return questionDTOS;
     }
 }
 

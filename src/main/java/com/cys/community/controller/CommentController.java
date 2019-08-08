@@ -1,7 +1,9 @@
 package com.cys.community.controller;
 
 import com.cys.community.dto.CommentCreateDTO;
+import com.cys.community.dto.CommentDTO;
 import com.cys.community.dto.ResultDTO;
+import com.cys.community.enums.CommentTypeEnum;
 import com.cys.community.exception.CustomizeErrorCode;
 import com.cys.community.model.Comment;
 import com.cys.community.model.User;
@@ -9,12 +11,10 @@ import com.cys.community.service.CommentService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * @Author: sam
@@ -48,7 +48,15 @@ public class CommentController {
         comment.setCommentator(user.getId());
         comment.setLikeCount(0L);
 
-        commentService.insert(comment);
+        commentService.insert(comment,user);
         return ResultDTO.okOf();
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/comment/{id}", method = RequestMethod.GET)
+    public ResultDTO<List<CommentDTO>> comments(@PathVariable(name = "id") Long id) {
+        //二级
+        List<CommentDTO> commentDTOS = commentService.listByTargetId(id, CommentTypeEnum.COMMENT);
+        return ResultDTO.okOf(commentDTOS);
     }
 }

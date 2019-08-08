@@ -32,4 +32,8 @@
     </update>
 
 
+    <select id="selectRelated" parameterType="com.cys.community.model.Question" resultMap="BaseResultMap">
+        select * from QUESTION where ID != #{id} and tag regexp #{tag}
+    </select>
+
 </mapper>

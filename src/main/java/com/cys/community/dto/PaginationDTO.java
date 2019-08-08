@@ -15,8 +15,8 @@ import java.util.List;
  * 页面控制逻辑
  */
 @Data
-public class PaginationDTO {
-    private List<QuestionDTO> questionDTOList;
+public class PaginationDTO<T> {
+    private List<T> data;
     private boolean showPrevious;
     private boolean showFirstPage;
     private boolean showNext;
