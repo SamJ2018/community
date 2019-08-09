@@ -107,7 +107,7 @@
                 <configuration>
                     <url>jdbc:mysql://10.9.133.177:3306/dreamax</url>
                     <user>root</user>
-                    <password>362361</password>
+                    <password>cys199511188177</password>
                 </configuration>
                 <dependencies>
                     <dependency>

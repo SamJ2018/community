@@ -3239,3 +3239,21 @@ Caused by: java.lang.ClassNotFoundException: Cannot find class: com.cys.communit
 2019-08-09 15:25:23.147  INFO 8816 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
 2019-08-09 15:25:23.148  INFO 8816 --- [restartedMain] com.cys.community.CommunityApplication   : Started CommunityApplication in 18.42 seconds (JVM running for 3573.478)
 2019-08-09 15:25:23.190  INFO 8816 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-08-09 15:28:25.528  INFO 8816 --- [Thread-53] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 15:28:27.803  INFO 8816 --- [restartedMain] com.cys.community.CommunityApplication   : Starting CommunityApplication on SAMTAL with PID 8816 (C:\Users\missb\Desktop\community\target\classes started by missb in C:\Users\missb\Desktop\community)
+2019-08-09 15:28:27.803  INFO 8816 --- [restartedMain] com.cys.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2019-08-09 15:28:29.958  INFO 8816 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2019-08-09 15:28:29.960  INFO 8816 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-09 15:28:29.968  INFO 8816 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-09 15:28:29.970  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2019-08-09 15:28:29.971  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-08-09 15:28:29.971  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-08-09 15:28:29.974  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2019-08-09 15:28:30.231  INFO 8816 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2019-08-09 15:28:30.231  INFO 8816 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2418 ms
+2019-08-09 15:28:33.781  INFO 8816 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 15:28:34.063  INFO 8816 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-08-09 15:28:35.534  INFO 8816 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-08-09 15:28:35.573  INFO 8816 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2019-08-09 15:28:35.574  INFO 8816 --- [restartedMain] com.cys.community.CommunityApplication   : Started CommunityApplication in 8.034 seconds (JVM running for 3765.905)
+2019-08-09 15:28:35.579  INFO 8816 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
