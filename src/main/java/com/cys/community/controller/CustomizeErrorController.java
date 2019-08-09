@@ -46,7 +46,7 @@ public class CustomizeErrorController implements ErrorController {
             model.addAttribute("message","请求资源错误，请换个姿势？");
         }
         if(status.is5xxServerError()){
-            model.addAttribute("message", CustomizeErrorCode.SERVICE_ERROR);
+            model.addAttribute("message", CustomizeErrorCode.SERVICE_ERROR.getMessage());
         }
         return new ModelAndView("error");
     }
