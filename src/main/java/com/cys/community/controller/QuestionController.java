@@ -30,7 +30,7 @@ public class QuestionController {
 
     @GetMapping("/question/{id}")
     public String question(@PathVariable(name = "id") Long id,
-                           Model model, HttpServletRequest request) {
+                           Model model) {
         QuestionDTO questionDTO = questionService.getById(id);
         List<QuestionDTO> relatedQuestions = questionService.selectRelated(questionDTO);
         List<CommentDTO> comments = commentService.listByTargetId(id, CommentTypeEnum.QUESTION);
@@ -40,7 +40,6 @@ public class QuestionController {
         model.addAttribute("comments", comments);
         model.addAttribute("question", questionDTO);
         model.addAttribute("relatedQuestions", relatedQuestions);
-        System.out.println(request.getContextPath());
         return "question";
     }
 }

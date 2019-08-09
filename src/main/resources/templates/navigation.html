@@ -25,20 +25,23 @@
                 </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li th:if="${session.user ==null}">
-                        <a href="#" >注册</a>
+                        <a href="#">注册</a>
                     </li>
                     <li th:if="${session.user != null}">
                         <a href="/publish" th:if="${section != 'questions' && section != 'replies'}">提问</a>
                     </li>
-                    <li><a href="/profile/replies" th:if="${session.user != null}">通知<span class="badge" th:text="${session.unreadCount}"></span></a></li>
+                    <li><a href="/profile/replies" th:if="${session.user != null}">通知<span class="badge"
+                                                                                           th:text="${session.unreadCount}"></span></a>
+                    </li>
                     <li class="dropdown" th:if="${session.user != null}">
-                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                            aria-expanded="false">
                             <span th:text="${session.user.getName()}"></span>
                             <span class="caret"></span>
                         </a>
-                         <ul class="dropdown-menu" style="min-width:100%;">
-                            <li><a href="/profile/questions" th:if="${section != 'questions' && section != 'replies'}">我的问题</a></li>
+                        <ul class="dropdown-menu" style="min-width:100%;">
+                            <li><a href="/profile/questions" th:if="${section != 'questions' && section != 'replies'}">我的问题</a>
+                            </li>
                             <li><a href="/logout">退出登陆</a></li>
                         </ul>
                     </li>
@@ -50,12 +53,10 @@
                         </a>
                         <ul class="dropdown-menu" style="min-width:100%;">
                             <li>
-                                <!--<a href="https://github.com/login/oauth/authorize?client_ida=1572121ada7cbca3061f&redirect_uri=http://localhost:8888/callback&scope=user&state=1">GitHub</a>-->
-                                <a th:href="@{https://github.com/login/oauth/authorize(client_id='1572121ada7cbca3061f',redirect_uri=${#httpServletRequest.getContextPath()},scope='user',status=1)}">登陆</a>
+                                <a th:href="@{https://github.com/login/oauth/authorize(client_id='1572121ada7cbca3061f',redirect_uri=${#httpServletRequest.getRequestURL()+'callback'},scope='user',status=1)}">登陆</a>
                             </li>
                         </ul>
                     </li>
-                    <span th:text="@{${#httpServletRequest.getContextPath()}}"></span>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
