@@ -2,6 +2,7 @@ package com.cys.community.service;
 
 import com.cys.community.dto.PaginationDTO;
 import com.cys.community.dto.QuestionDTO;
+import com.cys.community.dto.QuestionQueryDTO;
 import com.cys.community.exception.CustomizeErrorCode;
 import com.cys.community.exception.CustomizeException;
 import com.cys.community.mapper.QuestionExtMapper;
@@ -42,12 +43,23 @@ public class QuestionService {
     @Autowired
     private QuestionExtMapper questionExtMapper;
 
-    public PaginationDTO list(Integer page, Integer size) {
+    public PaginationDTO list(String search, Integer page, Integer size) {
+
+        if (StringUtils.isNotBlank(search)) {
+            //获取每一个tag
+            String[] tags = StringUtils.split(search, " ");
+            search = Arrays.stream(tags).collect(Collectors.joining("|"));
+        }
+
+        System.out.println(search);
+
 
         PaginationDTO paginationDTO = new PaginationDTO();
         Integer totalPage;
         //获取到所有记录数
-        Integer totalCount = (int) questionMapper.countByExample(new QuestionExample());
+        QuestionQueryDTO questionQueryDTO = new QuestionQueryDTO();
+        questionQueryDTO.setSearch(search);
+        Integer totalCount = questionExtMapper.countBySearch(questionQueryDTO);
 
         totalPage = totalCount % size == 0 ? totalCount / size : totalCount / size + 1;
 
@@ -58,7 +70,11 @@ public class QuestionService {
         Integer offset = size * (page - 1);
         QuestionExample questionExample = new QuestionExample();
         questionExample.setOrderByClause("gmt_create desc");
-        List<Question> questions = questionMapper.selectByExampleWithRowbounds(questionExample, new RowBounds(offset, size));
+
+        questionQueryDTO.setSize(size);
+        questionQueryDTO.setPage(offset);
+
+        List<Question> questions = questionExtMapper.selectBySearch(questionQueryDTO);
         List<QuestionDTO> questionDTOS = new ArrayList<>();
         for (Question question : questions) {
             User user = userMapper.selectByPrimaryKey(question.getCreator());
