@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * @Author: sam
  * @create 2019-08-06-12:05 AM
@@ -23,7 +25,8 @@ public class IndexController {
     public String index(Model model,
                         @RequestParam(name = "page", defaultValue = "1") Integer page,
                         @RequestParam(name = "size", defaultValue = "5") Integer size,
-                        @RequestParam(name = "search", required = false) String search) {
+                        @RequestParam(name = "search", required = false) String search
+                        ) {
 
         PaginationDTO pagination = questionService.list(search, page, size);
         model.addAttribute("pagination", pagination);
