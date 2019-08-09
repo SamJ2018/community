@@ -65,3 +65,23 @@
 2019-08-09 09:06:45.467 DEBUG 5688 --- [http-nio-8888-exec-4] c.c.c.m.N.countByExample                 : <==      Total: 1
 2019-08-09 09:06:45.460 DEBUG 5688 --- [http-nio-8888-exec-5] c.c.c.m.N.countByExample                 : ==> Parameters: 33(Long), 0(Integer)
 2019-08-09 09:06:45.469 DEBUG 5688 --- [http-nio-8888-exec-5] c.c.c.m.N.countByExample                 : <==      Total: 1
+2019-08-09 09:20:03.372  INFO 5688 --- [Thread-18] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 09:20:03.376  INFO 5688 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-08-09 09:20:03.628  INFO 5688 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-08-09 09:20:05.064  INFO 5688 --- [restartedMain] com.cys.community.CommunityApplication   : Starting CommunityApplication on SAMTAL with PID 5688 (C:\Users\missb\Desktop\community\target\classes started by missb in C:\Users\missb\Desktop\community)
+2019-08-09 09:20:05.064  INFO 5688 --- [restartedMain] com.cys.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2019-08-09 09:20:06.444  INFO 5688 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2019-08-09 09:20:06.446  INFO 5688 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-09 09:20:06.447  INFO 5688 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-09 09:20:06.448  INFO 5688 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2019-08-09 09:20:06.448  INFO 5688 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-08-09 09:20:06.448  INFO 5688 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-08-09 09:20:06.451  INFO 5688 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2019-08-09 09:20:06.591  INFO 5688 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-09 09:20:06.591  INFO 5688 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1520 ms
+2019-08-09 09:20:06.986  INFO 5688 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 09:20:07.083  INFO 5688 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-08-09 09:20:09.257  INFO 5688 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-08-09 09:20:09.290  INFO 5688 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2019-08-09 09:20:09.291  INFO 5688 --- [restartedMain] com.cys.community.CommunityApplication   : Started CommunityApplication in 4.354 seconds (JVM running for 823.44)
+2019-08-09 09:20:09.296  INFO 5688 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
