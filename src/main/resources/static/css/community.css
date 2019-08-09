@@ -30,7 +30,7 @@ body {
 .community-menu {
     color: #999;
     font-size: 13px;
-    margin-bottom: 13px;i
+    margin-bottom: 13px;
 }
 
 .jumbotron {
@@ -129,5 +129,9 @@ body {
     margin: 5px 5px;
 }
 
+.footer {
+    padding: 10px 25%;
+    color: #666;
+}
 
 
