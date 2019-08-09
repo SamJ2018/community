@@ -3052,3 +3052,190 @@ Update your application's configuration
 2019-08-09 14:11:26.800  INFO 12616 --- [Thread-30] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2019-08-09 14:11:26.803  INFO 12616 --- [Thread-30] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2019-08-09 14:11:26.813  INFO 12616 --- [Thread-30] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-08-09 14:25:55.135  INFO 8816 --- [restartedMain] com.cys.community.CommunityApplication   : Starting CommunityApplication on SAMTAL with PID 8816 (C:\Users\missb\Desktop\community\target\classes started by missb in C:\Users\missb\Desktop\community)
+2019-08-09 14:25:55.150  INFO 8816 --- [restartedMain] com.cys.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2019-08-09 14:25:55.277  INFO 8816 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-09 14:25:55.278  INFO 8816 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-09 14:26:01.881  INFO 8816 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2019-08-09 14:26:02.025  INFO 8816 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-09 14:26:02.027  INFO 8816 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-09 14:26:02.077  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2019-08-09 14:26:02.079  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-08-09 14:26:02.081  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-08-09 14:26:02.232  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2019-08-09 14:26:02.870  INFO 8816 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-09 14:26:02.872  INFO 8816 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7593 ms
+2019-08-09 14:26:06.753  INFO 8816 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 14:26:07.588  INFO 8816 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-08-09 14:26:10.380  INFO 8816 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-08-09 14:26:10.544  INFO 8816 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2019-08-09 14:26:10.556  INFO 8816 --- [restartedMain] com.cys.community.CommunityApplication   : Started CommunityApplication in 16.734 seconds (JVM running for 20.886)
+2019-08-09 14:26:18.161  INFO 8816 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-09 14:26:18.162  INFO 8816 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-09 14:26:18.181  INFO 8816 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2019-08-09 14:26:18.361  INFO 8816 --- [http-nio-8888-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-08-09 14:26:18.693  INFO 8816 --- [http-nio-8888-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-08-09 14:26:18.707 DEBUG 8816 --- [http-nio-8888-exec-1] c.c.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from QUESTION 
+2019-08-09 14:26:18.753 DEBUG 8816 --- [http-nio-8888-exec-1] c.c.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2019-08-09 14:26:18.786 DEBUG 8816 --- [http-nio-8888-exec-1] c.c.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2019-08-09 14:26:18.794 DEBUG 8816 --- [http-nio-8888-exec-1] c.c.c.m.Q.selectBySearch                 : ==>  Preparing: select * from QUESTION order by gmt_create desc limit ?,? 
+2019-08-09 14:26:18.803 DEBUG 8816 --- [http-nio-8888-exec-1] c.c.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2019-08-09 14:26:18.829 DEBUG 8816 --- [http-nio-8888-exec-1] c.c.c.m.Q.selectBySearch                 : <==      Total: 5
+2019-08-09 14:26:18.830 DEBUG 8816 --- [http-nio-8888-exec-1] c.c.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2019-08-09 14:26:18.835 DEBUG 8816 --- [http-nio-8888-exec-1] c.c.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 33(Long)
+2019-08-09 14:26:18.838 DEBUG 8816 --- [http-nio-8888-exec-1] c.c.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2019-08-09 14:26:18.862 DEBUG 8816 --- [http-nio-8888-exec-1] c.c.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2019-08-09 14:26:18.863 DEBUG 8816 --- [http-nio-8888-exec-1] c.c.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 33(Long)
+2019-08-09 14:26:18.865 DEBUG 8816 --- [http-nio-8888-exec-1] c.c.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2019-08-09 14:26:18.866 DEBUG 8816 --- [http-nio-8888-exec-1] c.c.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2019-08-09 14:26:18.866 DEBUG 8816 --- [http-nio-8888-exec-1] c.c.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 33(Long)
+2019-08-09 14:26:18.867 DEBUG 8816 --- [http-nio-8888-exec-1] c.c.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2019-08-09 14:26:18.868 DEBUG 8816 --- [http-nio-8888-exec-1] c.c.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2019-08-09 14:26:18.869 DEBUG 8816 --- [http-nio-8888-exec-1] c.c.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 33(Long)
+2019-08-09 14:26:18.870 DEBUG 8816 --- [http-nio-8888-exec-1] c.c.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2019-08-09 14:26:18.871 DEBUG 8816 --- [http-nio-8888-exec-1] c.c.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2019-08-09 14:26:18.872 DEBUG 8816 --- [http-nio-8888-exec-1] c.c.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 33(Long)
+2019-08-09 14:26:18.873 DEBUG 8816 --- [http-nio-8888-exec-1] c.c.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2019-08-09 14:29:22.191  WARN 8816 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m3s391ms206µs721ns).
+2019-08-09 14:42:34.449  WARN 8816 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m11s149ms102µs759ns).
+2019-08-09 14:44:45.947  WARN 8816 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m11s498ms643µs901ns).
+2019-08-09 14:57:48.725  WARN 8816 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m2s777ms721µs384ns).
+2019-08-09 15:00:31.471  WARN 8816 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m42s746ms98µs389ns).
+2019-08-09 15:02:16.356  WARN 8816 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m44s885ms306µs305ns).
+2019-08-09 15:03:13.948  WARN 8816 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=57s591ms932µs309ns).
+2019-08-09 15:04:24.706  WARN 8816 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m10s757ms168µs794ns).
+2019-08-09 15:07:45.271  WARN 8816 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m50s561ms342µs866ns).
+2019-08-09 15:09:40.463  WARN 8816 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m25s188ms442µs686ns).
+2019-08-09 15:10:37.611  WARN 8816 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=57s147ms357µs246ns).
+2019-08-09 15:14:37.821  WARN 8816 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m53s338ms416µs608ns).
+2019-08-09 15:14:45.149  INFO 8816 --- [Thread-32] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 15:14:45.171  INFO 8816 --- [Thread-32] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-08-09 15:14:45.786  INFO 8816 --- [Thread-32] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-08-09 15:15:13.460  INFO 8816 --- [restartedMain] com.cys.community.CommunityApplication   : Starting CommunityApplication on SAMTAL with PID 8816 (C:\Users\missb\Desktop\community\target\classes started by missb in C:\Users\missb\Desktop\community)
+2019-08-09 15:15:13.460  INFO 8816 --- [restartedMain] com.cys.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2019-08-09 15:15:14.902  WARN 8816 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.cys.community.mapper]' package. Please check your configuration.
+2019-08-09 15:15:15.001  WARN 8816 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.cys.community]' package. Please check your configuration.
+2019-08-09 15:15:15.716  INFO 8816 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2019-08-09 15:15:15.721  INFO 8816 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-09 15:15:15.722  INFO 8816 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-09 15:15:15.724  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2019-08-09 15:15:15.726  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-08-09 15:15:15.727  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-08-09 15:15:15.728  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2019-08-09 15:15:16.204  INFO 8816 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2019-08-09 15:15:16.205  INFO 8816 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2732 ms
+2019-08-09 15:15:16.495  INFO 8816 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 15:15:17.101  INFO 8816 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-08-09 15:15:17.222  WARN 8816 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\missb\Desktop\community\target\classes\mapper\CommentExtMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\missb\Desktop\community\target\classes\mapper\CommentExtMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.cys.community.model.Comment'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.cys.community.model.Comment
+2019-08-09 15:15:17.223  INFO 8816 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 15:15:17.223  INFO 8816 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-08-09 15:15:17.238  INFO 8816 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-08-09 15:15:17.241 ERROR 8816 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\missb\Desktop\community\target\classes\mapper\CommentExtMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\missb\Desktop\community\target\classes\mapper\CommentExtMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.cys.community.model.Comment'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.cys.community.model.Comment
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at com.cys.community.CommunityApplication.main(CommunityApplication.java:12) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_151]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\missb\Desktop\community\target\classes\mapper\CommentExtMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\missb\Desktop\community\target\classes\mapper\CommentExtMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.cys.community.model.Comment'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.cys.community.model.Comment
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	... 24 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\Users\missb\Desktop\community\target\classes\mapper\CommentExtMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\missb\Desktop\community\target\classes\mapper\CommentExtMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.cys.community.model.Comment'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.cys.community.model.Comment
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:534) ~[mybatis-spring-2.0.1.jar:2.0.1]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:424) ~[mybatis-spring-2.0.1.jar:2.0.1]
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:554) ~[mybatis-spring-2.0.1.jar:2.0.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:150) ~[mybatis-spring-boot-autoconfigure-2.0.1.jar:2.0.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$e002cca9.CGLIB$sqlSessionFactory$1(<generated>) ~[mybatis-spring-boot-autoconfigure-2.0.1.jar:2.0.1]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$e002cca9$$FastClassBySpringCGLIB$$ac4bbb3.invoke(<generated>) ~[mybatis-spring-boot-autoconfigure-2.0.1.jar:2.0.1]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) ~[spring-context-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$e002cca9.sqlSessionFactory(<generated>) ~[mybatis-spring-boot-autoconfigure-2.0.1.jar:2.0.1]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_151]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_151]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_151]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_151]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	... 25 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [C:\Users\missb\Desktop\community\target\classes\mapper\CommentExtMapper.xml]'. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.cys.community.model.Comment'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.cys.community.model.Comment
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:122) ~[mybatis-3.5.1.jar:3.5.1]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94) ~[mybatis-3.5.1.jar:3.5.1]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:532) ~[mybatis-spring-2.0.1.jar:2.0.1]
+	... 38 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.cys.community.model.Comment'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.cys.community.model.Comment
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:118) ~[mybatis-3.5.1.jar:3.5.1]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:262) ~[mybatis-3.5.1.jar:3.5.1]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:253) ~[mybatis-3.5.1.jar:3.5.1]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:245) ~[mybatis-3.5.1.jar:3.5.1]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:118) ~[mybatis-3.5.1.jar:3.5.1]
+	... 40 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'com.cys.community.model.Comment'.  Cause: java.lang.ClassNotFoundException: Cannot find class: com.cys.community.model.Comment
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120) ~[mybatis-3.5.1.jar:3.5.1]
+	at org.apache.ibatis.builder.BaseBuilder.resolveAlias(BaseBuilder.java:149) ~[mybatis-3.5.1.jar:3.5.1]
+	at org.apache.ibatis.builder.BaseBuilder.resolveClass(BaseBuilder.java:116) ~[mybatis-3.5.1.jar:3.5.1]
+	... 44 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: com.cys.community.model.Comment
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200) ~[mybatis-3.5.1.jar:3.5.1]
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89) ~[mybatis-3.5.1.jar:3.5.1]
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261) ~[mybatis-3.5.1.jar:3.5.1]
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116) ~[mybatis-3.5.1.jar:3.5.1]
+	... 46 common frames omitted
+
+2019-08-09 15:15:37.961  INFO 8816 --- [restartedMain] com.cys.community.CommunityApplication   : Starting CommunityApplication on SAMTAL with PID 8816 (C:\Users\missb\Desktop\community\target\classes started by missb in C:\Users\missb\Desktop\community)
+2019-08-09 15:15:37.962  INFO 8816 --- [restartedMain] com.cys.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2019-08-09 15:15:40.366  INFO 8816 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2019-08-09 15:15:40.370  INFO 8816 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-09 15:15:40.372  INFO 8816 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-09 15:15:40.373  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2019-08-09 15:15:40.373  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-08-09 15:15:40.374  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-08-09 15:15:40.383  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2019-08-09 15:15:40.582  INFO 8816 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2019-08-09 15:15:40.586  INFO 8816 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2615 ms
+2019-08-09 15:15:41.355  INFO 8816 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 15:15:41.560  INFO 8816 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-08-09 15:15:44.299  INFO 8816 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-08-09 15:15:44.370  INFO 8816 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2019-08-09 15:15:44.383  INFO 8816 --- [restartedMain] com.cys.community.CommunityApplication   : Started CommunityApplication in 6.56 seconds (JVM running for 2994.713)
+2019-08-09 15:15:44.389  INFO 8816 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-08-09 15:24:59.589  INFO 8816 --- [Thread-41] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 15:25:05.478  INFO 8816 --- [restartedMain] com.cys.community.CommunityApplication   : Starting CommunityApplication on SAMTAL with PID 8816 (C:\Users\missb\Desktop\community\target\classes started by missb in C:\Users\missb\Desktop\community)
+2019-08-09 15:25:05.479  INFO 8816 --- [restartedMain] com.cys.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2019-08-09 15:25:10.991  INFO 8816 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2019-08-09 15:25:10.994  INFO 8816 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-09 15:25:10.996  INFO 8816 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-09 15:25:10.998  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2019-08-09 15:25:10.998  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-08-09 15:25:10.999  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-08-09 15:25:11.007  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2019-08-09 15:25:11.370  INFO 8816 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2019-08-09 15:25:11.371  INFO 8816 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5846 ms
+2019-08-09 15:25:19.040  INFO 8816 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 15:25:19.586  INFO 8816 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-08-09 15:25:23.022  INFO 8816 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-08-09 15:25:23.147  INFO 8816 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2019-08-09 15:25:23.148  INFO 8816 --- [restartedMain] com.cys.community.CommunityApplication   : Started CommunityApplication in 18.42 seconds (JVM running for 3573.478)
+2019-08-09 15:25:23.190  INFO 8816 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged

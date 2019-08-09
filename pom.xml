@@ -87,6 +87,11 @@
             <artifactId>commons-io</artifactId>
             <version>1.3.2</version>
         </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.16</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -100,15 +105,20 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>5.2.4</version>
                 <configuration>
-                    <url>jdbc:h2:~/community</url>
-                    <user>sam</user>
-                    <password>123</password>
+                    <url>jdbc:mysql://10.9.133.177:3306/dreamax</url>
+                    <user>root</user>
+                    <password>362361</password>
                 </configuration>
                 <dependencies>
                     <dependency>
                         <groupId>com.h2database</groupId>
                         <artifactId>h2</artifactId>
                         <version>1.4.197</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>8.0.16</version>
                     </dependency>
                 </dependencies>
             </plugin>
@@ -118,9 +128,9 @@
                 <version>1.3.7</version>
                 <dependencies>
                     <dependency>
-                        <groupId>com.h2database</groupId>
-                        <artifactId>h2</artifactId>
-                        <version>1.4.199</version>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>8.0.16</version>
                     </dependency>
                 </dependencies>
             </plugin>
