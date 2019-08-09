@@ -3809,3 +3809,40 @@ Caused by: java.lang.IllegalStateException: Cannot load driver class: com.mysql.
 2019-08-09 16:58:46.903  INFO 8816 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
 2019-08-09 16:58:46.904  INFO 8816 --- [restartedMain] com.cys.community.CommunityApplication   : Started CommunityApplication in 8.136 seconds (JVM running for 9177.234)
 2019-08-09 16:58:46.909  INFO 8816 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-08-09 16:59:59.076  INFO 8816 --- [Thread-122] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 17:00:00.885  INFO 8816 --- [restartedMain] com.cys.community.CommunityApplication   : Starting CommunityApplication on SAMTAL with PID 8816 (C:\Users\missb\Desktop\community\target\classes started by missb in C:\Users\missb\Desktop\community)
+2019-08-09 17:00:00.885  INFO 8816 --- [restartedMain] com.cys.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2019-08-09 17:00:04.181  INFO 8816 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2019-08-09 17:00:04.183  INFO 8816 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-09 17:00:04.183  INFO 8816 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-09 17:00:04.184  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2019-08-09 17:00:04.184  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-08-09 17:00:04.185  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-08-09 17:00:04.185  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2019-08-09 17:00:04.320  INFO 8816 --- [restartedMain] o.a.c.c.C.[Tomcat-5].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2019-08-09 17:00:04.320  INFO 8816 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3423 ms
+2019-08-09 17:00:04.936  INFO 8816 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 17:00:05.118  INFO 8816 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-08-09 17:00:07.182  INFO 8816 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-08-09 17:00:07.219  INFO 8816 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2019-08-09 17:00:07.222  INFO 8816 --- [restartedMain] com.cys.community.CommunityApplication   : Started CommunityApplication in 6.702 seconds (JVM running for 9257.552)
+2019-08-09 17:00:07.226  INFO 8816 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-08-09 17:04:35.318  INFO 8816 --- [Thread-128] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-09 17:04:37.522  INFO 8816 --- [restartedMain] com.cys.community.CommunityApplication   : Starting CommunityApplication on SAMTAL with PID 8816 (C:\Users\missb\Desktop\community\target\classes started by missb in C:\Users\missb\Desktop\community)
+2019-08-09 17:04:37.522  INFO 8816 --- [restartedMain] com.cys.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2019-08-09 17:04:40.620  INFO 8816 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2019-08-09 17:04:40.622  INFO 8816 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-09 17:04:40.626  INFO 8816 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-09 17:04:40.626  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2019-08-09 17:04:40.626  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-08-09 17:04:40.627  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-08-09 17:04:40.630  INFO 8816 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2019-08-09 17:04:41.100  INFO 8816 --- [restartedMain] o.a.c.c.C.[Tomcat-5].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2019-08-09 17:04:41.101  INFO 8816 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3509 ms
+2019-08-09 17:04:43.511  INFO 8816 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-09 17:04:43.920  INFO 8816 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-08-09 17:04:46.289  INFO 8816 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-08-09 17:04:46.326  INFO 8816 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2019-08-09 17:04:46.327  INFO 8816 --- [restartedMain] com.cys.community.CommunityApplication   : Started CommunityApplication in 9.205 seconds (JVM running for 9536.658)
+2019-08-09 17:04:46.333  INFO 8816 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-08-09 17:05:26.067  INFO 8816 --- [Thread-134] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

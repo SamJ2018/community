@@ -3,24 +3,24 @@
         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
-<generatorConfiguration> <!--root element of a Mybatis Generator configuration file-->
-    <!--<classPathEntry location="/Program Files/IBM/SQLLIB/java/db2java.zip"/>  -->
+<generatorConfiguration>
 
-    <context id="mysql" targetRuntime="MyBatis3">
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+
         <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
-        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://10.9.133.177:3306/dreamax"
-                        userId="root"
-                        password="cys199511188177">
+        <jdbcConnection driverClass="org.h2.Driver"
+                        connectionURL="jdbc:h2:~/community"
+                        userId="sam"
+                        password="123">
         </jdbcConnection>
 
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="com.cys.community.model" targetProject="src/main/java"> <!--配置放置的包和项目-->
+        <javaModelGenerator targetPackage="com.cys.community.model" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
-            <property name="trimStrings" value="true"/> <!--判断是否有空格，可以去掉-->
+            <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
         <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources">
@@ -28,19 +28,11 @@
         </sqlMapGenerator>
 
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.cys.community.mapper"
-                             targetProject="src/main/java"><!--生成xml-->
+                             targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <table tableName="user" domainObjectName="User">
-            <!-- <property name="useActualColumnNames" value="true"/> 驼峰标识-->
-            <!--<generatedKey column="ID" sqlStatement="DB2" identity="true"/>-->
-            <!-- <columnOverride column="DATE_FIELD" property="startDate"/>
-             <ignoreColumn column="FRED"/>
-             <columnOverride column="LONG_VARCHAR_FIELD" jdbcType="VARCHAR"/>-->
-
-        </table>
-
+        <table tableName="user" domainObjectName="User"></table>
         <table tableName="question" domainObjectName="Question"></table>
         <table tableName="comment" domainObjectName="Comment"></table>
         <table tableName="notification" domainObjectName="Notification"></table>
