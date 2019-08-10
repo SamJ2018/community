@@ -1,16 +1,16 @@
 package com.cys.community.dto;
 
 /**
- * @Author: sam
+ * @author sam
  * @create 2019-08-07-10:08 PM
- * @Description:
+ * @apiNote  页面接受到的DTO
  **/
 
 import com.cys.community.model.User;
 import lombok.Data;
 
 /**
- * 页面接受到的DTO
+ *
  */
 @Data
 public class CommentDTO {

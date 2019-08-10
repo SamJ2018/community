@@ -15,9 +15,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
- * @Author: sam
- * @create 2019-08-06-10:23 PM
- * @Description:
+ * @author : sam
+ * @since  2019-08-06-10:23 PM
+ * @apiNote
  **/
 @Service
 public class SessionInterceptor implements HandlerInterceptor {

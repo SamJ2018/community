@@ -1,9 +1,9 @@
 package com.cys.community.exception;
 
 /**
- * @Author: sam
- * @create 2019-08-07-12:13 PM
- * @Description:
+ * @author : sam
+ * @since  2019-08-07-12:13 PM
+ * @apiNote :
  **/
 public interface ICustomizeErrorCode {
     String getMessage();

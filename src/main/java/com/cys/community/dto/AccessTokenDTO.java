@@ -3,9 +3,9 @@ package com.cys.community.dto;
 import lombok.Data;
 
 /**
- * @Author: sam
- * @create 2019-08-06-7:37 AM
- * @Description:
+ * @author sam
+ * @since  2019-08-06-7:37 AM
+ * @apiNote :
  **/
 @Data
 public class AccessTokenDTO {
@@ -14,5 +14,4 @@ public class AccessTokenDTO {
     private String code;
     private String redirect_uri;
     private String state;
-
 }

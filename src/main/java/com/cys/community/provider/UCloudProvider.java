@@ -16,9 +16,9 @@ import java.io.InputStream;
 import java.util.UUID;
 
 /**
- * @Author: sam
- * @create 2019-08-08-11:21 PM
- * @Description:
+ * @author : sam
+ * @since  2019-08-08-11:21 PM
+ * @apiNote :
  **/
 @Service
 public class UCloudProvider {

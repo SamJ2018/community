@@ -17,9 +17,9 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
- * @Author: sam
- * @create 2019-08-07-3:58 PM
- * @Description:
+ * @author sam
+ * @since 2019-08-07-3:58 PM
+ * @apiNote
  **/
 @Controller
 public class CommentController {

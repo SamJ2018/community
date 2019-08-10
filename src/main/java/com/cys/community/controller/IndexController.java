@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * @Author: sam
- * @create 2019-08-06-12:05 AM
- * @Description:
+ * @author sam
+ * @since  2019-08-06-12:05 AM
+ * @apiNote
  **/
 @Controller
 public class IndexController {

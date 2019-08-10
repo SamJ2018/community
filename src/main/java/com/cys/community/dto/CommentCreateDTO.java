@@ -3,17 +3,14 @@ package com.cys.community.dto;
 import lombok.Data;
 
 /**
- * @Author: sam
- * @create 2019-08-07-4:19 PM
- * @Description:
+ * @author sam
+ * @since  2019-08-07-4:19 PM
+ * @apiNote :
  **/
 
-/**
- * 传给页面的DTO
- */
 @Data
 public class CommentCreateDTO {
     private Long parentId;
-    private String content;
-    private Integer type;
+    private String content; //评论的内容
+    private Integer type; //评论的类型
 }

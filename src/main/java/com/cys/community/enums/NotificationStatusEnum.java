@@ -1,9 +1,9 @@
 package com.cys.community.enums;
 
 /**
- * @Author: sam
- * @create 2019-08-08-5:17 PM
- * @Description:
+ * @author : sam
+ * @since  2019-08-08-5:17 PM
+ * @apiNote :
  **/
 public enum NotificationStatusEnum {
     UNREAD(0),READ(1)

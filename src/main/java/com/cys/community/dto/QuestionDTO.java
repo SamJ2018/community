@@ -4,9 +4,9 @@ import com.cys.community.model.User;
 import lombok.Data;
 
 /**
- * @Author: sam
- * @create 2019-08-06-1:33 PM
- * @Description:
+ * @author : sam
+ * @since  2019-08-06-1:33 PM
+ * @apiNote :
  **/
 @Data
 public class QuestionDTO {

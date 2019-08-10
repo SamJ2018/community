@@ -15,9 +15,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * @Author: sam
- * @create 2019-08-07-11:20 AM
- * @Description:
+ * @author sam
+ * @since  2019-08-07-11:20 AM
+ * @apiNote :
  **/
 
 @ControllerAdvice
@@ -28,12 +28,12 @@ public class CustomizeExceptionHandler {
         String contentType = request.getContentType();
 
         if ("application/json".equals(contentType)) {
-            ResultDTO resultDTO ;
+            ResultDTO resultDTO ; //封装错误信息
             //返回 json
             if (e instanceof CustomizeException) {
                 resultDTO = ResultDTO.errOf((CustomizeException) e);
             } else {
-                resultDTO = ResultDTO.errOf(CustomizeErrorCode.SERVICE_ERROR);
+                resultDTO = ResultDTO.errOf(CustomizeErrorCode.SYS_ERROR);
             }
             try {
                 response.setContentType("application/json;charset=utf-8");
@@ -50,7 +50,7 @@ public class CustomizeExceptionHandler {
             if (e instanceof CustomizeException) {
                 model.addAttribute("message", e.getMessage());
             } else {
-                model.addAttribute("message", CustomizeErrorCode.SERVICE_ERROR);
+                model.addAttribute("message", CustomizeErrorCode.SYS_ERROR);
             }
             return new ModelAndView("error");
         }

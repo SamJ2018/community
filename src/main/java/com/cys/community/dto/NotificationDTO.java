@@ -3,9 +3,9 @@ package com.cys.community.dto;
 import lombok.Data;
 
 /**
- * @Author: sam
- * @create 2019-08-08-5:35 PM
- * @Description:
+ * @author : sam
+ * @since  2019-08-08-5:35 PM
+ * @apiNote
  **/
 @Data
 public class NotificationDTO {

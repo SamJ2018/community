@@ -11,13 +11,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
- * @Author: sam
- * @create 2019-08-06-10:57 PM
- * @Description:
+ * @author sam
+ * @since  2019-08-06-10:57 PM
+ * @apiNote :
  **/
 @Controller
 public class QuestionController {

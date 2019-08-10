@@ -3,9 +3,9 @@ package com.cys.community.dto;
 import lombok.Data;
 
 /**
- * @Author: sam
- * @create 2019-08-06-7:54 AM
- * @Description:
+ * @author sam
+ * @since  2019-08-06-7:54 AM
+ * @apiNote
  **/
 
 @Data

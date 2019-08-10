@@ -1,9 +1,9 @@
 package com.cys.community.enums;
 
 /**
- * @Author: sam
- * @create 2019-08-08-5:11 PM
- * @Description:
+ * @author : sam
+ * @since  2019-08-08-5:11 PM
+ * @apiNote :
  **/
 public enum NotificationEnum {
     REPLY_QUESTION(1, "回复了问题"),

@@ -3,9 +3,9 @@ package com.cys.community.dto;
 import lombok.Data;
 
 /**
- * @Author: sam
- * @create 2019-08-09-7:42 AM
- * @Description:
+ * @author : sam
+ * @since -08-09-7:42 AM
+ * @apiNote
  **/
 @Data
 public class QuestionQueryDTO {

@@ -1,6 +1,8 @@
 package com.cys.community.controller;
 
 import com.cys.community.dto.FileDTO;
+import com.cys.community.exception.CustomizeErrorCode;
+import com.cys.community.exception.CustomizeException;
 import com.cys.community.provider.UCloudProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,14 +15,10 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 /**
- * @Author: sam
- * @create 2019-08-08-10:31 PM
- * @Description:
+ * @author sam
+ * @apiNote 文件上传控制层
+ * @since 2019-08-08-10:31 PM
  **/
-
-/**
- * 文件上传...
- */
 @Controller
 public class FileController {
 
@@ -34,16 +32,13 @@ public class FileController {
         MultipartFile file = multipartRequest.getFile("editormd-image-file");
         try {
             String fileName = uCloudProvider.upload(file.getInputStream(), file.getContentType(), file.getOriginalFilename());
+            System.out.println(fileName);
             FileDTO fileDTO = new FileDTO();
             fileDTO.setSuccess(1);
             fileDTO.setUrl(fileName);
             return fileDTO;
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new CustomizeException(CustomizeErrorCode.FILE_UPLOAD_FAIL);
         }
-        FileDTO fileDTO = new FileDTO();
-        fileDTO.setSuccess(1);
-        fileDTO.setUrl("/images/wx_img.png");
-        return fileDTO;
     }
 }

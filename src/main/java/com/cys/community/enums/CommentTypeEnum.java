@@ -1,9 +1,9 @@
 package com.cys.community.enums;
 
 /**
- * @Author: sam
- * @create 2019-08-07-4:47 PM
- * @Description:
+ * @author : sam
+ * @since  2019-08-07-4:47 PM
+ * @apiNote :
  **/
 public enum CommentTypeEnum {
     QUESTION(1),

@@ -12,9 +12,9 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * @Author: sam
- * @create 2019-08-07-12:32 PM
- * @Description:
+ * @author sam
+ * @since  2019-08-07-12:32 PM
+ * @apiNote :
  **/
 @Controller()
 @RequestMapping("${server.error.path:${error.path:/error}}")
@@ -46,7 +46,7 @@ public class CustomizeErrorController implements ErrorController {
             model.addAttribute("message","请求资源错误，请换个姿势？");
         }
         if(status.is5xxServerError()){
-            model.addAttribute("message", CustomizeErrorCode.SERVICE_ERROR.getMessage());
+            model.addAttribute("message", CustomizeErrorCode.SYS_ERROR.getMessage());
         }
         return new ModelAndView("error");
     }

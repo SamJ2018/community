@@ -1,9 +1,9 @@
 package com.cys.community.exception;
 
 /**
- * @Author: sam
- * @create 2019-08-07-12:04 PM
- * @Description:
+ * @author  sam
+ * @since  2019-08-07-12:04 PM
+ * @apiNote
  **/
 public class CustomizeException extends RuntimeException {
     private String message;
