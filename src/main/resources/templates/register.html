@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://wwww.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>注册</title>
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <script src="/js/jquery-3.4.1.min"></script>
+    <script src="/js/bootstrap.js"></script>
+
+</head>
+<body>
+<div class="container" style="width: 400px;">
+    <h3 style="text-align: center;">正在维修中</h3>
+    <form action="" method="post">
+        <div class="form-group">
+            <label for="user">用户名：</label>
+            <input type="text" name="username" class="form-control" id="user" placeholder="请输入用户名"/>
+        </div>
+
+        <div class="form-group">
+            <label for="password">密码：</label>
+            <input type="password" name="password" class="form-control" id="password" placeholder="请输入密码"/>
+        </div>
+
+        <div class="form-group">
+            <label for="password">确认密码：</label>
+            <input type="password" name="password" class="form-control" id="repassword" placeholder="确认密码"/>
+        </div>
+
+        <div class="form-group">
+            <label for="password">手机验证码：</label>
+            <input type="password" name="text" class="form-control" id="validate" placeholder="手机验证码"/>
+        </div>
+
+        <hr/>
+        <div class="form-group" style="text-align: center;">
+            <input class="btn btn btn-primary" type="submit" value="注册">
+        </div>
+    </form>
+
+    <!-- 出错显示的信息框 -->
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" >
+            <span>&times;</span>
+        </button>
+    </div>
+</div>
+</body>
+</html>

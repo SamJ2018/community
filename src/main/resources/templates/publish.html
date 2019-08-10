@@ -54,17 +54,19 @@
                     <input type="text" class="form-control" id="tag" th:value="${tag}" name="tag"
                            placeholder="输入标签，以，号分割..." autocomplete="off" onclick="showSelectTag()">
                     <div id="select-tag" class="publish-tag-tab">
-                        <!-- Nav tabs -->
+                        <!-- 主框 -->
                         <ul class="nav nav-tabs" role="tablist" >
                             <li role="presentation" th:each="selectCategory,selectCategoryStat : ${tags}" th:class="${selectCategoryStat.first?'active':''}"><a th:href="${'#'+selectCategory.categoryName}" aria-controls="home" role="tab"
                                                                       data-toggle="tab" th:text="${selectCategory.categoryName}"></a></li>
                         </ul>
-                        <!-- Tab panes -->
+                        <!-- 从框 -->
                         <div class="tab-content">
                             <div role="tabpanel" q th:id="${selectCategory.categoryName}" th:each="selectCategory : ${tags}" th:class="${selectCategoryStat.first?'active tab-pane':'tab-pane'}">
-                                <span class="label label-info " th:each="selectTag : ${selectCategory.tags}">
-                                    <span class="glyphicon glyphicon-tags" onclick="selectTag(this)" th:data-tag="${selectTag}" th:text="${' '+selectTag}" ></span>
+                                <h4>
+                                    <span class="label label-info " th:each="selectTag : ${selectCategory.tags}">
+                                        <span class="glyphicon glyphicon-tags" onclick="selectTag(this)" th:data-tag="${selectTag}" th:text="${' '+selectTag}" ></span>
                                     </span>
+                                </h4>
                             </div>
                         </div>
                     </div>
