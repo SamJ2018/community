@@ -4916,15 +4916,15 @@ a.label:focus {
   font-size: 12px;
   font-weight: bold;
   line-height: 1;
-  color: #fff;
+  color: #777;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  background-color: #777;
-  border-radius: 10px;
+  background-color: #761c19;
 }
 .badge:empty {
-  display: none;
+    border-radius: 10px;
+    display: none;
 }
 .btn .badge {
   position: relative;
