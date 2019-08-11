@@ -45,20 +45,20 @@ public class QuestionService {
 
     public PaginationDTO list(String search, Integer page, Integer size) {
 
+        QuestionQueryDTO questionQueryDTO = new QuestionQueryDTO();
         if (StringUtils.isNotBlank(search)) {
             //获取每一个tag
             String[] tags = StringUtils.split(search, " ");
             search = Arrays.stream(tags).collect(Collectors.joining("|"));
+            questionQueryDTO.setSearch(search);
+            //获取到所有记录数
         }
 
-        System.out.println(search);
-
-
         PaginationDTO paginationDTO = new PaginationDTO();
+
+
         Integer totalPage;
-        //获取到所有记录数
-        QuestionQueryDTO questionQueryDTO = new QuestionQueryDTO();
-        questionQueryDTO.setSearch(search);
+
         Integer totalCount = questionExtMapper.countBySearch(questionQueryDTO);
 
         totalPage = totalCount % size == 0 ? totalCount / size : totalCount / size + 1;
@@ -198,6 +198,11 @@ public class QuestionService {
         }).collect(Collectors.toList());
 
         return questionDTOS;
+    }
+
+    public static void main(String[] args) {
+        String s = " 123    123";
+        System.out.println(s.replace(" ",""));
     }
 }
 

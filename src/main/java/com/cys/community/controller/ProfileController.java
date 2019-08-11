@@ -32,7 +32,7 @@ public class ProfileController {
                           Model model,
                           HttpServletRequest request,
                           @RequestParam(name = "page", defaultValue = "1") Integer page,
-                          @RequestParam(name = "size", defaultValue = "5") Integer size) {
+                          @RequestParam(name = "size", defaultValue = "10") Integer size) {
 
         User user = (User) request.getSession().getAttribute("user");
 
@@ -49,6 +49,7 @@ public class ProfileController {
             model.addAttribute("section", "replies");
             model.addAttribute("pagination", paginationDTO);
             model.addAttribute("sectionName", "最新回复");
+            model.addAttribute("unreadCount",unreadCount);
         }
         return "profile";
     }

@@ -41,7 +41,12 @@ create table USER
 mvn flyway:migrate
 mvn flyway:repair
 mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
+nohup ./start.sh nohup.out 2>&1 &  
+top -bn 1 -i -c 
+
 ```
 
 ### 工具
 [Markdown插件](http://editor.md.ipandao.com/)
+
+

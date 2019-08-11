@@ -1,42 +1,56 @@
-<!DOCTYPE html>
-<html xmlns:th="http://wwww.thymeleaf.org">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>注册</title>
-    <link href="/css/bootstrap.css" rel="stylesheet">
-    <script src="/js/jquery-3.4.1.min"></script>
-    <script src="/js/bootstrap.js"></script>
-
-</head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>程序猿社区</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/common/login-style.css" />
 <body>
-<div class="container" style="width: 400px;">
-    <h3 style="text-align: center;">正在维修中</h3>
-    <form action="/afterRegister" method="post">
-        <div class="form-group">
-            <label for="user">用户名：</label>
-            <input type="text" name="username" class="form-control" id="user" placeholder="请输入用户名"/>
-        </div>
 
-        <div class="form-group">
-            <label for="password">密码：</label>
-            <input type="password" name="password" class="form-control" id="password" placeholder="请输入密码"/>
-        </div>
+<div class="register-container">
+    <h1>注册</h1>
 
-        <hr/>
-        <div class="form-group" style="text-align: center;">
-            <input class="btn btn btn-primary" type="submit" value="注册">
+    <form  method="post" id="registerForm">
+        <div>
+            <input type="text" name="username" id="username" class="username"
+                   placeholder="您的用户名" autocomplete="off"/>
         </div>
+        <div>
+            <input type="text" name="phone_number"  id="number" class="phone_number"
+                   placeholder="输入手机号码" autocomplete="off"/>
+        </div>
+        <div>
+            <input type="email" name="email"  id="email" class="email"
+                   placeholder="输入邮箱地址" oncontextmenu="return false" onpaste="return false" />
+        </div>
+        <div>
+            <input type="text" name="yzNum" placeholder="输入验证码" id="yzNum"/>
+            <button type="button" id="sendYzm">获取验证码</button>
+        </div>
+        <div>
+            <input type="password" name="password" id="password" class="password"
+                   placeholder="输入密码" oncontextmenu="return false" onpaste="return false" />
+        </div>
+        <div>
+            <input type="password" name="confirm_password" id="confirm_password"
+                   class="confirm_password" placeholder="再次输入密码"
+                   oncontextmenu="return false" onpaste="return false" />
+        </div>
+        <button id="registerBtn" type="button">注 册</button>
     </form>
 
-    <!-- 出错显示的信息框 -->
-    <div class="alert alert-warning alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" >
-            <span>x</span>
-        </button>
-    </div>
 </div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/common/common.js"></script>
+<!--背景图片自动更换-->
+<script src="/js/common/supersized.3.2.7.min.js"></script>
+<script src="/js/common/supersized-init.js"></script>
+<!--表单验证-->
+<script src="/js/common/jquery.validate.min.js?var1.14.0"></script>
+<script src="/js/user/register.js"></script>
 </body>
 </html>

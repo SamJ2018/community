@@ -1,6 +1,5 @@
 package com.cys.community.mapper;
 
-import com.cys.community.dto.QuestionDTO;
 import com.cys.community.dto.QuestionQueryDTO;
 import com.cys.community.model.Question;
 

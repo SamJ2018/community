@@ -9,7 +9,7 @@ import lombok.Data;
  **/
 @Data
 public class QuestionQueryDTO {
-    private String search;
-    private Integer page;
-    private Integer size;
+    private String search ; //条件
+    private Integer page; //页数
+    private Integer size; //
 }
