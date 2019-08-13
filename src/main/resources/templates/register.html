@@ -3,23 +3,23 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>程序猿社区</title>
+    <title>藏龙阁</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <link rel="stylesheet" href="/css/common/login-style.css" />
+
 <body>
 
 <div class="register-container">
     <h1>注册</h1>
-
-    <form  method="post" id="registerForm">
+    <form  method="post" id="registerForm" action="/afterRegister" enctype="multipart/form-data">
         <div>
             <input type="text" name="username" id="username" class="username"
                    placeholder="您的用户名" autocomplete="off"/>
         </div>
         <div>
             <input type="text" name="phone_number"  id="number" class="phone_number"
-                   placeholder="输入手机号码" autocomplete="off"/>
+                   placeholder="输入手机号码（没钱发短信，麻烦跳过）" autocomplete="off"/>
         </div>
         <div>
             <input type="email" name="email"  id="email" class="email"
@@ -28,6 +28,7 @@
         <div>
             <input type="text" name="yzNum" placeholder="输入验证码" id="yzNum"/>
             <button type="button" id="sendYzm">获取验证码</button>
+            <span style="color:green;" id="codeHint">没钱发短信了，麻烦先跳过</span>
         </div>
         <div>
             <input type="password" name="password" id="password" class="password"
@@ -38,7 +39,8 @@
                    class="confirm_password" placeholder="再次输入密码"
                    oncontextmenu="return false" onpaste="return false" />
         </div>
-        <button id="registerBtn" type="button">注 册</button>
+
+        <button id="registerBtn" type="submit" >注 册</button>
     </form>
 
 </div>
@@ -46,11 +48,12 @@
 
 <script src="/js/jquery.min.js"></script>
 <script src="/js/common/common.js"></script>
+<script src="/js/user/alert.js"></script>
 <!--背景图片自动更换-->
 <script src="/js/common/supersized.3.2.7.min.js"></script>
 <script src="/js/common/supersized-init.js"></script>
 <!--表单验证-->
 <script src="/js/common/jquery.validate.min.js?var1.14.0"></script>
-<script src="/js/user/register.js"></script>
+<!--<script src="/js/user/register.js"></script>-->
 </body>
 </html>

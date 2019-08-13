@@ -40,7 +40,7 @@ public class AuthorizeController {
     @Autowired
     UserService userService;
 
-    @GetMapping("/callback")
+    @GetMapping("/login/callback")
     public String callback(@RequestParam(name = "code") String code,
                            @RequestParam(name = "state") String state,
                            HttpServletResponse response) {
@@ -51,7 +51,10 @@ public class AuthorizeController {
         accessTokenDTO.setCode(code);
         accessTokenDTO.setRedirect_uri(redirectUri);
         accessTokenDTO.setState(state);
+        System.out.println(accessTokenDTO);
         String accessToken = githubProvider.getAccessToken(accessTokenDTO);
+        System.out.println(accessToken);
+
         GithubUser githubUser = githubProvider.getUser(accessToken);
         if (githubUser != null && githubUser.getId() != null) {
             //保存user

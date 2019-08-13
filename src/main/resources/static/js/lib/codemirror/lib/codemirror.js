@@ -141,7 +141,7 @@
     // Will contain the actual code, positioned to cover the viewport.
     d.lineDiv = elt("div", null, "CodeMirror-code");
     // Elements are added to these to represent selection and cursors.
-    d.selectionDiv = elt("div", null, null, "position: relative; z-index: 1");
+    d.selectionDiv = elt("div", null, null, "position: relative; z-login: 1");
     d.cursorDiv = elt("div", null, "CodeMirror-cursors");
     // A visibility: hidden element used to find the size of things.
     d.measure = elt("div", null, "CodeMirror-measure");
@@ -168,7 +168,7 @@
     // The element in which the editor lives.
     d.wrapper = elt("div", [d.scrollbarFiller, d.gutterFiller, d.scroller], "CodeMirror");
 
-    // Work around IE7 z-index bug (not perfect, hence IE7 not really being supported)
+    // Work around IE7 z-login bug (not perfect, hence IE7 not really being supported)
     if (ie && ie_version < 8) { d.gutters.style.zIndex = -1; d.scroller.style.paddingRight = 0; }
     if (!webkit && !(gecko && mobile)) d.scroller.draggable = true;
 
@@ -1421,7 +1421,7 @@
       var oldCSS = te.style.cssText;
       input.wrapper.style.position = "absolute";
       te.style.cssText = "position: fixed; width: 30px; height: 30px; top: " + (e.clientY - 5) +
-        "px; left: " + (e.clientX - 5) + "px; z-index: 1000; background: " +
+        "px; left: " + (e.clientX - 5) + "px; z-login: 1000; background: " +
         (ie ? "rgba(255, 255, 255, .05)" : "transparent") +
         "; outline: none; border-width: 0; outline: none; overflow: hidden; opacity: .05; filter: alpha(opacity=5);";
       if (webkit) var oldScrollY = window.scrollY; // Work around Chrome issue (#2712)
@@ -4629,7 +4629,7 @@
   // cross line boundaries), "word" (across next word), or "group" (to
   // the start of next group of word or non-word-non-whitespace
   // chars). The visually param controls whether, in right-to-left
-  // text, direction 1 means to move towards the next index in the
+  // text, direction 1 means to move towards the next login in the
   // string, or towards the character to the right of the current
   // position. The resulting position will have a hitSide=true
   // property if it reached the end of the document.
@@ -5816,7 +5816,7 @@
         }
       } else {
         var match = this.string.slice(this.pos).match(pattern);
-        if (match && match.index > 0) return null;
+        if (match && match.login > 0) return null;
         if (match && consume !== false) this.pos += match[0].length;
         return match;
       }
@@ -6536,7 +6536,7 @@
     if (type) for (;;) {
       var lineClass = type.match(/(?:^|\s+)line-(background-)?(\S+)/);
       if (!lineClass) break;
-      type = type.slice(0, lineClass.index) + type.slice(lineClass.index + lineClass[0].length);
+      type = type.slice(0, lineClass.login) + type.slice(lineClass.login + lineClass[0].length);
       var prop = lineClass[1] ? "bgClass" : "textClass";
       if (output[prop] == null)
         output[prop] = lineClass[2];
@@ -7361,8 +7361,8 @@
         else {
           var found = cur.match(classTest(cls));
           if (!found) return false;
-          var end = found.index + found[0].length;
-          line[prop] = cur.slice(0, found.index) + (!found.index || end == cur.length ? "" : " ") + cur.slice(end) || null;
+          var end = found.login + found[0].length;
+          line[prop] = cur.slice(0, found.login) + (!found.login || end == cur.length ? "" : " ") + cur.slice(end) || null;
         }
         return true;
       });

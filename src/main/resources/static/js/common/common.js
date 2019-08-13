@@ -1,4 +1,8 @@
-﻿window.onload = function () {
+﻿/**
+ * 表单注册
+ */
+
+window.onload = function () {
     $(".connect p").eq(0).animate({left: "0%"}, 600);
     $(".connect p").eq(1).animate({left: "0%"}, 400);
 };
@@ -23,7 +27,16 @@ $(document).ready(function () {
                 required: true,
                 minlength: 3,
                 maxlength: 32,
-                remote: {url: "http://kouss.com/demo/Sharelink/remote.json", type: "post",},
+                remote:{
+                    url:"/registerValidate",
+                    type:"post",
+                    dataType:"json",
+                    data:{
+                        username:function () {
+                            return $("#username").val();
+                        }
+                    }
+                }
             },
             password: {required: true, minlength: 3, maxlength: 32,},
             email: {required: true, email: true,},
@@ -45,7 +58,7 @@ $(document).ready(function () {
     });
     jQuery.validator.addMethod("phone_number", function (d, b) {
         var a = d.length;
-        var c = /^(((13[0-9]{1})|(15[0-9]{1}))+\d{8})$/;
+        var c = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
         return this.optional(b) || (a == 11 && c.test(d))
     }, "手机号码格式错误")
 });

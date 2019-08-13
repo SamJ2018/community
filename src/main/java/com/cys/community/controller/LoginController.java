@@ -4,6 +4,7 @@ import com.cys.community.mapper.UserMapper;
 import com.cys.community.model.User;
 import com.cys.community.model.UserExample;
 import com.cys.community.service.UserService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -35,11 +36,15 @@ public class LoginController {
         UserExample userExample = new UserExample();
         userExample.createCriteria().andNameEqualTo(username).andTokenEqualTo(password);
         List<User> users = userMapper.selectByExample(userExample);
-        for (User user : users) {
-            userService.createOrUpdate(user);
-            break;
+        if (users.size() != 0) {
+            for (User user : users) {
+                userService.createOrUpdate(user);
+                break;
+            }
+            response.addCookie(new Cookie("token", password));
+        }else{
+            return "redirect:/login";
         }
-        response.addCookie(new Cookie("token", password));
         return "redirect:/";
     }
 }
