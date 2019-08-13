@@ -10,8 +10,8 @@ import java.util.stream.Collectors;
 
 /**
  * @author sam
- * @apiNote :
  * @since 2019-08-08-1:35 PM
+ * @apiNote :
  **/
 public class TagCache {
 
@@ -51,10 +51,14 @@ public class TagCache {
         devtools.setTags(Arrays.asList("git", "github", "visual-studio-code", "vim", "sublime-text", "xcode", "intellij-idea", "eclipse", "maven", "ide", "svn", "visual-studio", "atom", "emacs", "textmate", "hg"));
         tagDTOS.add(devtools);
 
-
         return tagDTOS;
     }
 
+    /**
+     * 校验标签是否合法
+     * @param tags
+     * @return
+     */
     public static String filterInvalid(String tags) {
         String[] split = StringUtils.split(tags, ",");
         List<TagDTO> tagDTOS = get();

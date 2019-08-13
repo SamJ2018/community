@@ -17,7 +17,7 @@ import java.io.PrintWriter;
 /**
  * @author sam
  * @since  2019-08-07-11:20 AM
- * @apiNote :
+ * @apiNote : 自定义异常处理器
  **/
 
 @ControllerAdvice
